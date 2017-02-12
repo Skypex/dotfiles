@@ -26,7 +26,7 @@ state='No player active'
 # Get current player status
 current=$(playerctl status)
 # If status not "No player found"
-if [[ ! $current = "No player found" ]]; then
+if [[ $current ]]; then
 	# Action "play"
 	if [[ $1 = "play" ]]; then
 		# Toggle play/pause
