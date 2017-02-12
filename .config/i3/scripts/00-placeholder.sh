@@ -1,18 +1,16 @@
 #!/bin/bash
 ################################################################################
-# Name:			applet-nm.sh
-# Description:	This script simply launches nm-applet after a short delay.
-#				This is needed because I want nm-applet to be always at the 
-#				first position from right.			
+# Name:			00-placeholder.sh
+# Description:	This script is just a placeholder for unused special buttons.
 # Author:		Daniel Pauler
 # Version:		1.0
 # Last Updated:	12 February 2017
 #
 ################################################################################
+# Set Variables
+#
+# $var='value'
+################################################################################
 # Main Program
 #
-
-# Delay (seconds)
-sleep 2
-# Launch nm-applet
-nm-applet &
+dunstify 'Placeholder' -u low
