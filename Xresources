@@ -1,8 +1,51 @@
-URxvt.font: 		xft:monospace:size=12
+!!
+!! URxvt
+!!
+
+URxvt.font: 		xft:Hack:size=12
 URxvt.letterSpace:	-1
 
 URxvt.scrollBar: 	false
 
-URxvt.background:	#151718
-URxvt.foreground:	#d6d6d6
-URxvt.cursorColor:	#d6d6d6
+
+
+!!
+!! COLOR THEME
+!!
+
+! special
+*.foreground:   #d6d6d6
+*.background:   #151718
+*.cursorColor:  #d6d6d6
+
+! black
+*.color0:       #151718
+*.color8:       #969896
+
+! red
+*.color1:       #F70500
+*.color9:       #cc342b
+
+! green
+*.color2:       #00FF01
+*.color10:      #08A423
+
+! yellow
+*.color3:       #FFDD00
+*.color11:      #fba922
+
+! blue
+*.color4:       #0028FF
+*.color12:      #2B46E2
+
+! magenta
+*.color5:       #7F00AD
+*.color13:      #a36ac7
+
+! cyan
+*.color6:       #386EE5
+*.color14:      #3971ed
+
+! white
+*.color7:       #d6d6d6
+*.color15:      #FFFFFF
