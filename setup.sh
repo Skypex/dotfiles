@@ -16,7 +16,7 @@ dotfiles='Code/dotfiles'
 # Folder where the backup files should go
 dotfiles_backup='dotfiles_backup'
 # List of files/folders to symlink (without the dot prefix)
-files='Xresources config/i3 config/rofi'
+files='zshrc Xresources config/i3 config/rofi'
 
 ################################################################################
 # Main Program
