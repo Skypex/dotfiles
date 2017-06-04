@@ -18,6 +18,7 @@ focus_follows_mouse no
 
 # Disable borders and indicator
 hide_edge_borders smart
+new_window pixel 2
 
 
 # Kill focused window
@@ -264,7 +265,8 @@ assign [class="^URxvt$"] $workspace1
 assign [class="^Chromium$"] $workspace2
 assign [class="^Sublime_text$"] $workspace3
 
-
+for_window [class="^URxvt$"] border none
+for_window [class="^Chromium$"] border none
 
 #
 # AUTOSTART
