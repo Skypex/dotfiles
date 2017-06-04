@@ -7,7 +7,7 @@ set $mod Mod4
 
 
 # Font settings
-font pango:System San Francisco Display 12
+font pango:System San Francisco Display 13
 
 
 
@@ -111,16 +111,16 @@ bindsym $mod+a focus parent
 # WORKSPACES
 #
 
-set $workspace1  "   1"
-set $workspace2  "   2"
-set $workspace3  "   3"
-set $workspace4  "   4"
-set $workspace5  "   5"
-set $workspace6  "   6"
-set $workspace7  "   7"
-set $workspace8  "   8"
-set $workspace9  "   9"
-set $workspace10 "   10"
+set $workspace1  "  1  "
+set $workspace2  "  2  "
+set $workspace3  "  3  "
+set $workspace4  "  4  "
+set $workspace5  "  5  "
+set $workspace6  "  6  "
+set $workspace7  "  7  "
+set $workspace8  "  8  "
+set $workspace9  "  9  "
+set $workspace10 "  10  "
 
 # Switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -207,11 +207,11 @@ bar {
 #
 
 # Rofi
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # Key indicators
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Lock the screen
 bindsym $mod+Shift+x exec ~/.config/i3/scripts/app-i3lock.sh
@@ -225,22 +225,22 @@ bindsym $mod+Print exec ~/.config/i3/scripts/app-scrot.sh focus
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/volume-ctl.sh -inc 5
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/volume-ctl.sh -dec 5
 bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume-mute.sh
-bindsym XF86AudioMicMute exec --no-startup-id ~/.config/i3/scripts/microphone-mute.sh
+#bindsym XF86AudioMicMute exec --no-startup-id ~/.config/i3/scripts/microphone-mute.sh
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo ~/.config/i3/scripts/backlight-ctl.sh -inc 200 
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo ~/.config/i3/scripts/backlight-ctl.sh -dec 200 
+#bindsym XF86MonBrightnessUp exec --no-startup-id sudo ~/.config/i3/scripts/backlight-ctl.sh -inc 200 
+#bindsym XF86MonBrightnessDown exec --no-startup-id sudo ~/.config/i3/scripts/backlight-ctl.sh -dec 200 
 
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id  ~/.config/i3/scripts/player-ctl.sh play
-bindsym XF86AudioNext exec --no-startup-id  ~/.config/i3/scripts/player-ctl.sh next
-bindsym XF86AudioPrev exec --no-startup-id  ~/.config/i3/scripts/player-ctl.sh prev
+#bindsym XF86AudioPlay exec --no-startup-id  ~/.config/i3/scripts/player-ctl.sh play
+#bindsym XF86AudioNext exec --no-startup-id  ~/.config/i3/scripts/player-ctl.sh next
+#bindsym XF86AudioPrev exec --no-startup-id  ~/.config/i3/scripts/player-ctl.sh prev
 
 # Other extra functions
-bindsym XF86WLAN exec --no-startup-id ~/.config/i3/scripts/network-wifi.sh
-bindsym XF86WebCam exec --no-startup-id ~/.config/i3/scripts/webcam-ctl.sh
-bindsym XF86Display exec --no-startup-id ~/.config/i3/scripts/display-ctl.sh
-bindsym XF86ScreenSaver exec ~/.config/i3/scripts/app-i3lock.sh
+#bindsym XF86WLAN exec --no-startup-id ~/.config/i3/scripts/network-wifi.sh
+#bindsym XF86WebCam exec --no-startup-id ~/.config/i3/scripts/webcam-ctl.sh
+#bindsym XF86Display exec --no-startup-id ~/.config/i3/scripts/display-ctl.sh
+#bindsym XF86ScreenSaver exec ~/.config/i3/scripts/app-i3lock.sh
 
 
 # Terminal
@@ -250,7 +250,7 @@ bindsym $mod+t exec urxvt
 bindsym $mod+f exec thunar
 
 # Browser
-bindsym $mod+b exec google-chrome
+bindsym $mod+b exec chromium
 
 # Keepass
 bindsym $mod+p exec keepassx
@@ -274,4 +274,4 @@ exec dropbox start
 exec xautolock -time 5 -locker '~/.config/i3/scripts/app-i3lock.sh' &
 
 # Start network manager
-exec ~/.config/i3/scripts/applet-nm.sh
+#exec ~/.config/i3/scripts/applet-nm.sh
