@@ -207,7 +207,7 @@ bar {
 #
 
 # Rofi
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # Key indicators
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
