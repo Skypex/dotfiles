@@ -2,7 +2,7 @@
 !! URxvt
 !!
 
-URxvt.font: 		xft:Hack:size=12
+URxvt.font: 		xft:Hack:size=13
 URxvt.letterSpace:	-1
 
 URxvt.scrollBar: 	false
