@@ -10,11 +10,11 @@ set $mod Mod4
 font pango:System San Francisco Display 12
 
 
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # Disable focus change with mouse hover
 focus_follows_mouse no
+
 
 # Disable borders and indicator
 hide_edge_borders smart
@@ -188,6 +188,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar
 bar {
     tray_padding 2
+    tray_output none
     status_command i3blocks -c ~/.config/i3/i3blocks.conf
     
     colors {
