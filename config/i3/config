@@ -111,9 +111,9 @@ bindsym $mod+a focus parent
 # WORKSPACES
 #
 
-set $workspace1  "  1  "
-set $workspace2  "  2  "
-set $workspace3  "  3  "
+set $workspace1  "  1:  "
+set $workspace2  "  2:  "
+set $workspace3  "  3:  "
 set $workspace4  "  4  "
 set $workspace5  "  5  "
 set $workspace6  "  6  "
@@ -258,6 +258,15 @@ bindsym $mod+p exec keepassx
 
 
 #
+# ASSIGN APPS TO WORKSPACE
+#
+assign [class="^URxvt$"] $workspace1
+assign [class="^Chromium$"] $workspace2
+assign [class="^Sublime_text$"] $workspace3
+
+
+
+#
 # AUTOSTART
 #
 
@@ -275,3 +284,8 @@ exec xautolock -time 5 -locker '~/.config/i3/scripts/app-i3lock.sh' &
 
 # Start network manager
 #exec ~/.config/i3/scripts/applet-nm.sh
+
+# Start some apps
+exec urxvt -e tmux
+exec chromium
+exec subl
