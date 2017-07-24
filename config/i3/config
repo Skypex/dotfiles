@@ -105,6 +105,9 @@ bindsym $mod+space focus mode_toggle
 # Focus the parent container
 bindsym $mod+a focus parent
 
+# Multiscreen setup
+bindsym $mod+Shift+plus move container to output right
+bindsym $mod+Shift+minus move container to output left
 
 
 #
