@@ -287,7 +287,7 @@ exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 exec --no-startup-id compton -f
 
 # Start Dropbox
-exec dropbox start
+exec --no-startup-id dropbox start
 
 # Autolock 5min
 exec xautolock -time 5 -locker '~/.config/i3/scripts/app-i3lock.sh' &
