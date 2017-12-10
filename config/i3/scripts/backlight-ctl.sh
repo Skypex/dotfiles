@@ -1,13 +1,13 @@
 #!/bin/bash
 ################################################################################
-# Name:			backlight-ctl.sh
-# Description:	This script handles the screen brightness.
-# Parameters:	$1		'-inc'		Increase brightness
-#				$1		'-dec'		Decrease brightness
-#				$2		int 		Value to inc/dec brightness
-# Author:		Daniel Pauler
-# Version:		1.0
-# Last Updated:	12 February 2017
+# Name:         backlight-ctl.sh
+# Description:  This script handles the screen brightness.
+# Parameters:   $1      '-inc'      Increase brightness
+#               $1      '-dec'      Decrease brightness
+#               $2      int         Value to inc/dec brightness
+# Author:       Daniel Pauler
+# Version:      1.0
+# Last Updated: 12 February 2017
 #
 ################################################################################
 # Set Variables
@@ -31,22 +31,22 @@ new="$current"
 
 # Increase selected
 if [[ $1 = "-inc" ]]; then
-	# Calculate new brightness value
-	new=$(( current + $2 ))
+    # Calculate new brightness value
+    new=$(( current + $2 ))
 
-	# Check if new value reached max
-	if [[ $new -gt 4437 ]]; then
-		new='4437'
-	fi
+    # Check if new value reached max
+    if [[ $new -gt 4437 ]]; then
+        new='4437'
+    fi
 # Decrease selected
 elif [[ $1 = "-dec" ]]; then
-	# Calculate new brightness value
-	new=$(( current - $2 ))
+    # Calculate new brightness value
+    new=$(( current - $2 ))
 
-	# Check if new value reached max
-	if [[ $new -lt 0 ]]; then
-		new='0'
-	fi
+    # Check if new value reached max
+    if [[ $new -lt 0 ]]; then
+        new='0'
+    fi
 fi
 
 # Set screen brightness
@@ -64,7 +64,7 @@ touch $store
 n_id=$(cat "$store")
 # Send notification
 if [[ $n_id -gt '0' ]]; then
-	sudo -u $user dunstify -p -r $n_id "Brightness: $percent%" -u low > "$store"
+    sudo -u $user dunstify -p -r $n_id "Brightness: $percent%" -u low > "$store"
 else
-	sudo -u $user dunstify -p "Brightness: $percent%" -u low > "$store"
+    sudo -u $user dunstify -p "Brightness: $percent%" -u low > "$store"
 fi

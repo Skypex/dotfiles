@@ -1,10 +1,10 @@
 #!/bin/bash
 ################################################################################
-# Name:			touchpad-ctl.sh
-# Description:	This script to toggle the touchpad on and off.
-# Author:		Daniel Pauler
-# Version:		1.0
-# Last Updated:	12 February 2017
+# Name:         touchpad-ctl.sh
+# Description:  This script to toggle the touchpad on and off.
+# Author:       Daniel Pauler
+# Version:      1.0
+# Last Updated: 12 February 2017
 #
 ################################################################################
 # Set Variables
@@ -21,10 +21,10 @@ state='OFF'
 #
 
 if synclient -l | grep "TouchpadOff .*=.*0" &> /dev/null ; then
-	synclient TouchpadOff=1 ;
+    synclient TouchpadOff=1 ;
 else
-	synclient TouchpadOff=0 ;
-	state='ON'
+    synclient TouchpadOff=0 ;
+    state='ON'
 fi
 
 # Prepare notification replacement
@@ -35,7 +35,7 @@ touch $store
 n_id=$(cat "$store")
 # Send notification
 if [[ $n_id -gt '0' ]]; then
-	dunstify -p -r $n_id "Touchpad: $state" -u low > "$store"
+    dunstify -p -r $n_id "Touchpad: $state" -u low > "$store"
 else
-	dunstify -p "Touchpad: $state" -u low > "$store"
+    dunstify -p "Touchpad: $state" -u low > "$store"
 fi
