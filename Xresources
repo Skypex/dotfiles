@@ -2,8 +2,7 @@
 !! URxvt
 !!
 
-URxvt.font: 		xft:Meslo LG S for Powerline:size=13
-!!URxvt.font: 		xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true,xft:Source\ Code\ Pro\ Medium:pixelsize=13:antialias=true:hinting=true  
+URxvt.font: 		xft:Meslo LG S for Powerline:size=11
 URxvt.letterSpace:	-1
 
 URxvt.scrollBar: 	false
