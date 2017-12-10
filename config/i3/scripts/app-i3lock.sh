@@ -1,12 +1,12 @@
 #!/bin/bash
 ################################################################################
-# Name:			app-i3lock.sh
-# Description:	This script implements a lockscreen using i3lock. It takes a 
-#				screenshot and blurs it. Afterwards this screenshot is used as 
-#				lockscreen background.
-# Author:		Daniel Pauler
-# Version:		1.0
-# Last Updated:	12 February 2017
+# Name:         app-i3lock.sh
+# Description:  This script implements a lockscreen using i3lock. It takes a 
+#               screenshot and blurs it. Afterwards this screenshot is used as 
+#               lockscreen background.
+# Author:       Daniel Pauler
+# Version:      1.0
+# Last Updated: 12 February 2017
 #
 ################################################################################
 # Main Program

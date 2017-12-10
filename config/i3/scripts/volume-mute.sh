@@ -1,10 +1,10 @@
 #!/bin/bash
 ################################################################################
-# Name:			volume-mute.sh
-# Description:	This script to toggle the volume on and off.
-# Author:		Daniel Pauler
-# Version:		1.0
-# Last Updated:	12 February 2017
+# Name:         volume-mute.sh
+# Description:  This script to toggle the volume on and off.
+# Author:       Daniel Pauler
+# Version:      1.0
+# Last Updated: 12 February 2017
 #
 ################################################################################
 # Set Variables
@@ -32,7 +32,7 @@ touch $store
 n_id=$(cat "$store")
 # Send notification
 if [[ $n_id -gt '0' ]]; then
-	dunstify -p -r $n_id "Volume: $volume" -u low > "$store"
+    dunstify -p -r $n_id "Volume: $volume" -u low > "$store"
 else
-	dunstify -p "Volume: $volume" -u low > "$store"
+    dunstify -p "Volume: $volume" -u low > "$store"
 fi
