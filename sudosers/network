@@ -1,0 +1,2 @@
+# Allow the network script to be executed with sudo
+ALL ALL=(ALL) NOPASSWD: /home/skypex/Code/dotfiles/config/i3/scripts/network-wifi.sh
