@@ -37,3 +37,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Some color settings 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+# Load SSH keys if pressent
+if [ -f $HOME/.ssh/init ]; then
+    source $HOME/.ssh/init > /dev/null 2>&1
+fi
