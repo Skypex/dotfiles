@@ -298,4 +298,4 @@ exec ~/.config/i3/scripts/applet-nm.sh
 # Start some apps
 exec urxvt -e tmux
 exec chromium
-exec subl
+exec code
