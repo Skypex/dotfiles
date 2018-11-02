@@ -268,7 +268,7 @@ bindsym $mod+p exec keepassx
 # Set apps to workspace
 assign [class="^URxvt$"] $workspace1
 assign [class="^Chromium$"] $workspace2
-assign [class="^Sublime_text$"] $workspace3
+assign [class="^code$"] $workspace3
 
 # Set window specific borders
 for_window [class="^URxvt$"] border none
