@@ -4,13 +4,15 @@
 # Description:  This script to toggle the wifi on and off.
 #               The actual on/off magic is done by the driver itself.
 # Author:       Daniel Pauler
-# Version:      1.0
-# Last Updated: 12 February 2017
+# Version:      1.1
+# Last Updated: 23 December 2017
 #
 ################################################################################
 # Set Variables
 #
 
+# User that should receive the notification
+user='skypex'
 # Store directory and file for the Dunst notification replacement
 store_dir='/tmp/dunst/'
 store='network-wifi'
@@ -21,12 +23,9 @@ state='OFF'
 # Main Program
 #
 
-# Wait for the magic
-sleep 1
-
 # Get wifi state
-wifi=$(sudo rfkill list 1 | grep -i 'soft blocked' | cut -d' ' -f3)
-if [[ $wifi = "yes" ]]; then
+wifi=$(sudo -u $user rfkill list 1 | grep -i 'soft blocked' | cut -d' ' -f3)
+if [[ $wifi == "no" ]]; then
     state="ON"
 fi
 
