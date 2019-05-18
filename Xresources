@@ -2,9 +2,8 @@
 !! URxvt
 !!
 
-URxvt.font: 		xft:Meslo LG S for Powerline:size=11
+URxvt.font: 		xft:Meslo LG S for Powerline:size=14
 URxvt.letterSpace:	-1
-
 URxvt.scrollBar: 	false
 
 

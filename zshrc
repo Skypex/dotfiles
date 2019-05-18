@@ -30,7 +30,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs command_execution_tim
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man colorize command-not-found cp sudo zsh-syntax-highlighting)
+plugins=(git colored-man-pages colorize command-not-found cp sudo)
 
 # Load the config
 source $ZSH/oh-my-zsh.sh
