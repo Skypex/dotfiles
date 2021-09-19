@@ -24,3 +24,20 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+#
+# Load profiles
+#
+[ -f $ZSH_CUSTOM/profiles/work.zsh ] && source $ZSH_CUSTOM/profiles/work.zsh
+[ -f $ZSH_CUSTOM/profiles/desktop.zsh ] && source $ZSH_CUSTOM/profiles/desktop.zsh
+
+
+#
+# General configuration
+#
+
+# General aliases
+[ -f $ZSH_CUSTOM/aliases/general_aliases ] && source $ZSH_CUSTOM/aliases/general_aliases
+
+# Go PATH setup
+export PATH=$PATH:/usr/local/go/bin

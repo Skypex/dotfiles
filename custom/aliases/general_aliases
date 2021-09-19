@@ -1,0 +1,6 @@
+#
+# General aliases
+#
+
+alias cdcode="cd ~/code"
+alias ll="ls -l"
