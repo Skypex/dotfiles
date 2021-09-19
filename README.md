@@ -1,52 +1,28 @@
 # dotfiles
 
+Here are my `dotfiles` that I currently use in combination with the following tools:
+
+* [WSL v2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+* [Windows Terminal](https://github.com/microsoft/terminal)
+* [Visual Studio Code](https://code.visualstudio.com/)
+
 ## Setup
 
-The setup assumes you have done a `git clone` of the `dotfiles` repo into your home directory.
+The setup assumes you have done a `git clone --recursive` of the `dotfiles` repo into your home directory.
 
 ```bash
-# Install zsh
-sudo apt update
-sudo apt install zsh curl
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# Change the default shell to zsh
-chsh -s $(which zsh)
 # Backup old config
 mv .zshrc .zshrc.backup
 # Symlink new config
 ln -s dotfiles/zshrc .zshrc
 ```
 
+In order to make the terminal usable you need to install the font [Source Code Pro for Powerline](https://github.com/powerline/fonts/tree/master/SourceCodePro).
 
-https://github.com/powerline/fonts/tree/master/SourceCodePro 
-`Source Code Pro for Powerline.otf`
+## Update custom plugins
 
+Custom plugins are included via `git submodules` - in order to update them you just need to fetch the submodules:
 
-
-# Dotfiles
-
-Here are my `dotfiles` that I use for my work laptop.
-Current setup uses the following tools:
-
-* [WSL v2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-* [Windows Terminal](https://github.com/microsoft/terminal)
-* [Visual Studio Code](https://code.visualstudio.com/)
-
-## Installation
-
-> **NOTE:**  This section is not finished and not tested!
-
-```sh
-ln -s dotfiles/zshrc .zshrc
-```
-
-Font
-
-[Powerline Fonts](https://github.com/powerline/fonts)
-
-Update Sub-modules
-
-```sh
+```bash
 git submodule update --remote --merge
 ```
