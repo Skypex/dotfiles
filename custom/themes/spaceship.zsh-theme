@@ -1,0 +1,1 @@
+/home/daniel/dotfiles/custom/themes/spaceship-prompt/spaceship.zsh-theme
