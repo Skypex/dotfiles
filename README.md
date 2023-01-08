@@ -24,5 +24,5 @@ In order to make the terminal usable you need to install the font [Source Code P
 Custom plugins are included via `git submodules` - in order to update them you just need to fetch the submodules:
 
 ```bash
-git submodule update --remote --merge
+git submodule update --remote --merge --recursive
 ```
